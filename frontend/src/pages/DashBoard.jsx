@@ -34,7 +34,7 @@ const Dashboard = () => {
         <div className="dashboard-wrapper">
             <div className="dashboard-card">
 
-                {/* 🔥 Enhanced Profile Section */}
+                {/* Enhanced Profile Section */}
                 <div className="profile-section">
                     <div className="profile-img-wrapper">
                         <img
