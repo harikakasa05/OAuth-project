@@ -44,8 +44,8 @@ app.use(passport.session());
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/user", require("./routes/user"));
 
-app.get("/", (req, res) => res.send("Backend is running successfully 🚀"));
-app.get("/test", (req, res) => res.send("Backend is working ✅"));
+app.get("/", (req, res) => res.send("Backend is running successfully "));
+app.get("/test", (req, res) => res.send("Backend is working "));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
