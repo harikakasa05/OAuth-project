@@ -7,7 +7,7 @@ if (
     !process.env.GOOGLE_CLIENT_SECRET ||
     !process.env.GOOGLE_CALLBACK_URL
 ) {
-    console.error("❌ Missing Google OAuth environment variables in .env");
+    console.error("Missing Google OAuth environment variables in .env");
     process.exit(1);
 }
 
@@ -27,7 +27,7 @@ passport.use(
                 const photo = profile.photos?.[0]?.value || "";
 
                 if (!email) {
-                    console.log("⚠️ No email received from Google");
+                    console.log("No email received from Google");
                 }
 
                 let user = await User.findOne({ googleId });
@@ -48,7 +48,7 @@ passport.use(
 
                 return done(null, user);
             } catch (error) {
-                console.error("❌ Google Auth Error:", error);
+                console.error("Google Auth Error:", error);
                 return done(error, null);
             }
         }
